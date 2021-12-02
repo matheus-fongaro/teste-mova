@@ -19,4 +19,7 @@
 .borda{
   border: 1px solid #6D2080;
 }
+.theme--light.v-btn.v-btn--has-bg {
+  background-color: #FFF !important;
+}
 </style>
