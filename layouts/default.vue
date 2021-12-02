@@ -7,9 +7,9 @@
       height="100px"
       app
     >
-      <VuetifyLogo />
+      <LogoMovaLogo />
       <v-spacer />
-      <ReturnButton @click="goBack" />
+      <CommonReturnButton @click="goBack" />
     </v-app-bar>
     <v-main>
       <v-container>

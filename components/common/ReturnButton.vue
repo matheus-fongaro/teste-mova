@@ -1,5 +1,4 @@
 <template>
-  <!-- <img src="../assets/svgs/icons/return_button.svg" alt="Retornar"> -->
   <v-btn
     elevation="0"
     tile
