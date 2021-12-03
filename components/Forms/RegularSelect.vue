@@ -5,7 +5,7 @@
     </div>
     <v-select
       v-model="selectedType"
-      class="mt-0 pt-0"
+      class="mt-0 pt-0 weight-700"
       :items="items"
       :label="hint"
     />
@@ -45,3 +45,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.theme--light.v-list-item:not(.v-list-item--disabled) {
+  font-weight: 700 !important;
+}
+</style>
