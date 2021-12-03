@@ -1,11 +1,9 @@
 <template>
-  <div class="text-center">
-    <v-pagination
-      v-model="pagina"
-      color="primary"
-      :length="tamanho"
-    />
-  </div>
+  <v-pagination
+    v-model="pagina"
+    color="primary"
+    :length="tamanho"
+  />
 </template>
 
 <script>
