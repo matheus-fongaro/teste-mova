@@ -12,7 +12,7 @@
       <CommonReturnButton @click="goBack" />
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container class="tela-cheia">
         <Nuxt />
       </v-container>
     </v-main>
@@ -57,3 +57,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.tela-cheia {
+  height: 100%;
+}
+</style>
