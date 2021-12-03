@@ -1,5 +1,7 @@
 <template>
-  <FormsSearchByType class="search-row" @pesquisar="pesquisar" />
+  <div>
+    <FormsSearchByType :class="{ 'mt-2' : $vuetify.breakpoint.xs, 'mt-15' : $vuetify.breakpoint.smAndUp}" @pesquisar="pesquisar" />
+  </div>
 </template>
 
 <script>
