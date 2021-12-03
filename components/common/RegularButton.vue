@@ -1,5 +1,10 @@
 <template>
-  <v-btn color="primary" class="px-3 text-capitalize">
+  <v-btn
+    width="156"
+    color="primary"
+    class="text-capitalize"
+    @click="$emit('click')"
+  >
     {{ btnText }}
   </v-btn>
 </template>
@@ -16,9 +21,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 .v-btn {
   font-size: 14px;
   font-weight: 400;
+  padding-block: 36px;
+  border-radius: 10px;
 }
 </style>

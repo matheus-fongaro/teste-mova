@@ -10,7 +10,7 @@
     >
     <span
       v-if="!$vuetify.breakpoint.mobile"
-      class="text-capitalize ml-2"
+      class="text-capitalize ml-2 primary--text"
     >Voltar</span>
   </v-btn>
 </template>
@@ -21,5 +21,8 @@
 }
 .theme--light.v-btn.v-btn--has-bg {
   background-color: #FFF !important;
+}
+span.text-capitalize {
+  font-size: 18px;
 }
 </style>
