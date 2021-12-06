@@ -28,7 +28,7 @@ export default {
     }
   },
   async mounted () {
-    const data = await this.$axios.$get('https://restcountries.eu/v3.1/all')
+    const data = await this.$axios.$get('https://restcountries.com/v2/all')
     this.countries = data
     this.tamanho = Math.ceil(data.length / 12)
   },
