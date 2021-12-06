@@ -10,7 +10,7 @@
       />
     </v-col>
     <v-col v-if="selectedType !== ''" cols="12" md="4">
-      <FormsRegularSelect v-model="termo" :items="mockItems" :label="selectedType" :hint="descricaoDoSelect" />
+      <FormsAutocompleteSelect v-model="termo" :items="mockItems" :label="selectedType" :hint="descricaoDoSelect" />
     </v-col>
     <v-col v-else cols="12" md="4" />
     <v-col v-if="$vuetify.breakpoint.xs" cols="6" />
