@@ -33,6 +33,11 @@ export default {
     return {
       autocomplete: ''
     }
+  },
+  watch: {
+    autocomplete (value) {
+      this.$emit('input', value)
+    }
   }
 }
 </script>

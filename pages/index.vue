@@ -28,12 +28,19 @@ export default {
     }
   },
   async mounted () {
-    const data = await this.$axios.$get('https://restcountries.com/v2/all')
+    const data = await this.$axios.$get('https://restcountries.com/v3.1/all')
     this.countries = data
-    this.tamanho = Math.ceil(data.length / 12)
+    data.length > 1 ? this.tamanho = Math.ceil(data.length / 12) : this.tamanho = 1
   },
   methods: {
-    pesquisar (pesquisa) {
+    async pesquisar (pesquisa) {
+      // as duas versões da api tem variáveis com nomes diferentes, e a versão 3.1 não tem o calling code do
+      // jeito que preciso, então por isso precisei usar as duas versões, dependendo da requisição
+      const version = pesquisa.selectedType === 'callingcode' ? 'v2' : 'v3.1'
+      const data = await this.$axios.$get(`https://restcountries.com/${version}/${pesquisa.selectedType}/${pesquisa.termo}`)
+      this.pagina = 1
+      data.length > 1 ? this.tamanho = Math.ceil(data.length / 12) : this.tamanho = 1
+      this.countries = data
     },
     paginacao (pagina) {
       this.pagina = pagina
