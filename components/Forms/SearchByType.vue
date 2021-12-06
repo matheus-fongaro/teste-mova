@@ -15,7 +15,7 @@
     <v-col v-else cols="12" md="4" />
     <v-col v-if="$vuetify.breakpoint.xs" cols="6" />
     <v-col cols="6" md="4">
-      <CommonRegularButton :btn-text="'Pesquisar'" @click="$emit('pesquisar', { selectedType, termo })" />
+      <CommonRegularButton :is-disabled="isDisabled" :btn-text="'Pesquisar'" @click="$emit('pesquisar', { selectedType, termo })" />
     </v-col>
   </v-row>
 </template>
@@ -68,6 +68,9 @@ export default {
         default:
           return ''
       }
+    },
+    isDisabled () {
+      return this.termo === ''
     }
   },
   watch: {

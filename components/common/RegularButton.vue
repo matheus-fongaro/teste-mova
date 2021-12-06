@@ -2,6 +2,7 @@
   <v-btn
     width="156"
     color="primary"
+    :disabled="isDisabled"
     class="text-capitalize"
     @click="$emit('click')"
   >
@@ -16,6 +17,9 @@ export default {
     btnText: {
       type: String,
       default: 'Ok'
+    },
+    isDisabled: {
+      type: Boolean
     }
   }
 }
