@@ -1,7 +1,18 @@
 <template>
   <v-row>
-    <v-col v-for="country in countries" :key="country.ccn3" class="d-flex child-flex" cols="12" md="4">
-      <CommonFlagsFlagComponent :country="country" @details="details" />
+    <v-col
+      v-for="country in countries"
+      :key="country.ccn3"
+      class="d-flex child-flex"
+      cols="12"
+      md="4"
+    >
+      <CommonFlagsFlagComponent
+        :country="country"
+        :max-width="'316'"
+        :max-height="'181'"
+        @details="details"
+      />
     </v-col>
   </v-row>
 </template>

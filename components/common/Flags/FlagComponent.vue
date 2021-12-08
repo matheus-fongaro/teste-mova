@@ -1,7 +1,7 @@
 <template>
   <v-img
     :src="country.flag"
-    max-height="181"
+    :max-height="maxHeight"
     :width="maxWidth"
     alt="Bandeira do país"
     @click="details(country)"
@@ -32,6 +32,10 @@ export default {
     maxWidth: {
       type: String,
       default: '100px'
+    },
+    maxHeight: {
+      type: String,
+      default: '181px'
     }
   },
   data () {

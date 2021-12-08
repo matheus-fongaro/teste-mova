@@ -1,13 +1,24 @@
 <template>
   <div class="d-flex flex-column fill-height">
     <div>
-      <FormsSearchByType :class="{ 'mt-2' : $vuetify.breakpoint.xs, 'mt-15' : $vuetify.breakpoint.smAndUp}" @pesquisar="pesquisar" />
+      <FormsSearchByType
+        :class="{ 'mt-2' : $vuetify.breakpoint.xs, 'mt-15' : $vuetify.breakpoint.smAndUp}"
+        @pesquisar="pesquisar"
+      />
     </div>
     <div>
-      <CommonFlags class="mt-2 mb-auto" :countries="paginatedCountries" :max-width="'316'" />
+      <CommonFlags
+        class="mt-2 mb-auto"
+        :countries="paginatedCountries"
+        :max-width="'316'"
+        :max-height="'181'"
+      />
     </div>
     <div class="mt-auto">
-      <CommonPaginationComponent :tamanho="tamanho" @pagina="paginacao" />
+      <CommonPaginationComponent
+        :tamanho="tamanho"
+        @pagina="paginacao"
+      />
     </div>
   </div>
 </template>
