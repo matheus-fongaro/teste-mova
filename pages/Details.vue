@@ -102,6 +102,7 @@ export default {
       if (this.country.borders) {
         this.borderCountriesArray = Object.values(this.country.borders).join(',')
         this.borderCountries = await this.$axios.$get(`https://restcountries.com/v2/alpha?codes=${this.borderCountriesArray}`)
+        this.borderCountries.length > 1 ? this.tamanho = Math.ceil(this.borderCountries.length / 12) : this.tamanho = 1
         this.hasBorderCountries = true
       } else {
         this.hasBorderCountries = false
