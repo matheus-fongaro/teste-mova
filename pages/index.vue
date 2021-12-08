@@ -24,7 +24,11 @@ export default {
   },
   computed: {
     paginatedCountries () {
-      return this.countries.slice((this.pagina - 1) * 12, this.pagina * 12)
+      if (this.countries.length) {
+        return this.countries.slice((this.pagina - 1) * 12, this.pagina * 12)
+      } else {
+        return this.countries
+      }
     }
   },
   async mounted () {

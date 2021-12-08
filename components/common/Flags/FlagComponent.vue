@@ -1,5 +1,11 @@
 <template>
-  <v-img :src="country.flag" :width="maxWidth" alt="Bandeira do país" @click="details(country)">
+  <v-img
+    :src="country.flag"
+    max-height="181"
+    :width="maxWidth"
+    alt="Bandeira do país"
+    @click="details(country)"
+  >
     <template #placeholder>
       <v-row
         class="fill-height ma-0"

@@ -133,7 +133,7 @@ export default {
       this.autocompleteItems = Object.keys(flattened).map((key) => {
         return {
           text: flattened[key],
-          value: flattened[key]
+          value: flattened[key].slice(0, 2)
         }
       })
     },

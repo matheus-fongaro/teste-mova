@@ -3,6 +3,7 @@
     elevation="0"
     tile
     :class="{ 'borda' : $vuetify.breakpoint.smAndUp}"
+    @click="backHome"
   >
     <img
       src="@/assets/svgs/icons/arrow-enter.svg"
@@ -14,6 +15,17 @@
     >Voltar</span>
   </v-btn>
 </template>
+
+<script>
+export default {
+  name: 'ReturnButton',
+  methods: {
+    backHome () {
+      this.$router.push('/')
+    }
+  }
+}
+</script>
 
 <style scoped>
 .borda{

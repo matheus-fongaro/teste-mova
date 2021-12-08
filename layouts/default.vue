@@ -7,7 +7,7 @@
       height="100px"
       app
     >
-      <LogoMovaLogo />
+      <LogoMovaLogo @click="goBack" />
       <v-spacer />
       <CommonReturnButton @click="goBack" />
     </v-app-bar>
@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     goBack () {
-      this.$router.go({ name: 'IndexPage' })
+      this.$router.push('/')
     }
   }
 }
